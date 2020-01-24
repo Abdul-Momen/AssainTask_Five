@@ -1,4 +1,4 @@
-package com.momen.assaintask_five;
+package com.momen.assaintask_five.Model;
 
 public class itemModel   {
     int image;

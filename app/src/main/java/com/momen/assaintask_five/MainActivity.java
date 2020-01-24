@@ -15,9 +15,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
-import com.bumptech.glide.Glide;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.momen.assaintask_five.Adapter.AlbumsAdapter;
+import com.momen.assaintask_five.Adapter.CustomAdapter;
+import com.momen.assaintask_five.Model.Album;
+import com.momen.assaintask_five.Model.itemModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<itemModel> arrayList;
     RecyclerView recyclerView2;
     int icons[] = {R.drawable.lunce1,R.drawable.lunce3,R.drawable.lunce6,R.drawable.lunce5,R.drawable.lunce7,R.drawable.salad2,R.drawable.lunce5,R.drawable.lunce5,R.drawable.lunce7};
-    String iconsName[] = {"Chrome", "Google Drive", "Facebook", "Twitter", "Google Maps", "WhatsApp", "LinkedIn", "Google+", "Instagram"};
+    String iconsName[] = {"lunce", "lunce", "lunce", "lunce", "lunce", "lunce", "lunce", "lunce", "Instagram"};
 
 
     ViewFlipper viewFlipper;

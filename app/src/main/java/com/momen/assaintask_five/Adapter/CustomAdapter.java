@@ -1,4 +1,4 @@
-package com.momen.assaintask_five;
+package com.momen.assaintask_five.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.momen.assaintask_five.R;
+import com.momen.assaintask_five.Model.itemModel;
 
 import java.util.ArrayList;
 

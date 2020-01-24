@@ -1,6 +1,7 @@
-package com.momen.assaintask_five;
+package com.momen.assaintask_five.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,6 +15,9 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.momen.assaintask_five.Grid_Item_Activity;
+import com.momen.assaintask_five.Model.Album;
+import com.momen.assaintask_five.R;
 
 import java.util.List;
 
@@ -32,6 +36,20 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
             count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             overflow = (ImageView) view.findViewById(R.id.overflow);
+
+
+            thumbnail.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+
+                    if(getLayoutPosition()==0){
+                       Intent intent= new Intent(v.getContext(), Grid_Item_Activity.class);
+                       v.getContext().startActivity(intent);
+                        Toast.makeText(mContext, "check", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
         }
     }
 
@@ -53,7 +71,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         Album album = albumList.get(position);
         holder.title.setText(album.getName());
-        holder.count.setText(album.getNumOfSongs() + " songs");
+        holder.count.setText("Price: "+album.getNumOfSongs() + " Tk");
 
         // loading album cover using Glide library
         Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
